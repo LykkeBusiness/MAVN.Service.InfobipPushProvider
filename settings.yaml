@@ -1,0 +1,28 @@
+InfobipPushProviderService:
+    Db:
+        LogsConnString:
+            settings-key: InfobipPushProviderService-LogsConnString
+            types:
+              - AzureTableStorage
+SlackNotifications:
+    AzureQueue:
+        ConnectionString:
+            settings-key: SlackNotificationsConnString
+            types:
+                - AzureTableStorage
+        QueueName:
+            settings-key: SlackQueueName
+MonitoringServiceClient:
+    MonitoringServiceUrl:
+        settings-key: MonitoringServiceUrl
+Infobip:
+    TimeoutMs:
+        settings-key: InfobipPushProviderService-InfobipTimeoutMS
+    Retries:
+        settings-key: InfobipPushProviderService-InfobipRetries
+    Token:
+        settings-key: InfobipPushProviderService-InfobipToken
+    FromSender:
+        settings-key: InfobipPushProviderService-InfobipFromSender
+    ServiceUrl:
+        settings-key: InfobipPushProviderService-InfobipServiceUrl

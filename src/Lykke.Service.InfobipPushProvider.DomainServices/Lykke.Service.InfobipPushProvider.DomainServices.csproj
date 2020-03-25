@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\client\Lykke.Service.InfobipPushProvider.InfobipClient\Lykke.Service.InfobipPushProvider.InfobipClient.csproj" />
+    <ProjectReference Include="..\Lykke.Service.InfobipPushProvider.Domain\Lykke.Service.InfobipPushProvider.Domain.csproj" />
+  </ItemGroup>
+</Project>
