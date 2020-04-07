@@ -1,4 +1,5 @@
-using System;
+﻿using System;
+using Lykke.HttpClientGenerator;
 using Lykke.HttpClientGenerator.Infrastructure;
 using Lykke.HttpClientGenerator.Retries;
 using MAVN.Service.InfobipPushProvider.InfobipClient.Infrastructure;
@@ -54,7 +55,7 @@ namespace MAVN.Service.InfobipPushProvider.InfobipClient
 
         private void InitializeClient()
         {
-            var clientBuilder = HttpClientGenerator.HttpClientGenerator.BuildForUrl(ServiceUrl)
+            var clientBuilder = HttpClientGenerator.BuildForUrl(ServiceUrl)
                 .WithAdditionalCallsWrapper(new ExceptionHandlerCallsWrapper())
                 .WithRetriesStrategy(new LinearRetryStrategy(TimeSpan.FromMilliseconds(TimeoutMs), Retries))
                 .WithAdditionalDelegatingHandler(new AuthorizationHeaderHttpClientHandler(AccessToken));

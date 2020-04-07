@@ -1,4 +1,4 @@
-using Autofac;
+﻿using Autofac;
 using JetBrains.Annotations;
 using Lykke.HttpClientGenerator;
 using Lykke.HttpClientGenerator.Infrastructure;
@@ -31,7 +31,7 @@ namespace MAVN.Service.InfobipPushProvider.Client
                 throw new ArgumentException("Value cannot be null or whitespace.",
                     nameof(InfobipPushProviderServiceClientSettings.ServiceUrl));
 
-            var clientBuilder = HttpClientGenerator.HttpClientGenerator.BuildForUrl(settings.ServiceUrl)
+            var clientBuilder = HttpClientGenerator.BuildForUrl(settings.ServiceUrl)
                 .WithAdditionalCallsWrapper(new ExceptionHandlerCallsWrapper());
 
             clientBuilder = builderConfigure?.Invoke(clientBuilder) ?? clientBuilder.WithoutRetries();
